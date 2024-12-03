@@ -1,13 +1,14 @@
 from src.data_processor import validate_and_transform
-from src.logger import setup_logger
+from src.logger import get_logger
+from config.settings import QUARANTINE_DIR
 
-logger = setup_logger()
+logger = get_logger(__name__)
 
 def process_file(file_path):
     logger.info(f"Processing file: {file_path}")
-    transformed_data = validate_and_transform(file_path)
+    transformed_data = validate_and_transform(file_path, QUARANTINE_DIR)
     
     if transformed_data is not None:
-        logger.info(f"Transformed data preview:\n{transformed_data.head()}")
+        logger.info(f"Transformed data schema:\n{transformed_data.dtypes}")
     else:
-        logger.error(f"Failed to process file: {file_path}")
+        logger.error(f"No rows to display: {file_path}")

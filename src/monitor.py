@@ -2,9 +2,8 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from src.data_handler import process_file
-from src.logger import setup_logger
-
-logger = setup_logger()
+from src.logger import get_logger
+logger = get_logger(__name__)
 
 class DataHandler(FileSystemEventHandler):
     def on_created(self, event):
