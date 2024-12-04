@@ -1,8 +1,8 @@
 
-# **Sensor Data Processing Pipeline**
+# ** Data Processing Pipeline**
 
 ## **Overview**
-This pipeline processes and analyzes sensor data and stores in a PostgreSQL database. Aggregations such as minimum, maximum, mean, and standard deviation are calculated for key measurements.
+This pipeline processes and analyzes sensor data and stores in a PostgreSQL database. Aggregations such as minimum, maximum, mean, and standard deviation are calculated for key measurements. Please refer to docs folder for Current and Scalable solution details.
 
 ---
 
