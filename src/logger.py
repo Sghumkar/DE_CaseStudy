@@ -4,7 +4,7 @@ from config.settings import LOG_DIR
 
 os.makedirs(LOG_DIR, exist_ok=True)
 
-def get_logger(name="WeatherDataPipeline"):
+def get_logger(name="CaseStudy"):
     
     logger = logging.getLogger(name)
     if not logger.hasHandlers():  # Check if the logger already has handlers

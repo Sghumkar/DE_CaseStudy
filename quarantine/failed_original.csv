@@ -1,0 +1,150 @@
+Station Name,Measurement Timestamp,Air Temperature,Humidity,Barometric Pressure,Measurement ID,Reason for Failure
+Foster Weather Station,05/22/2015 04:00:00 PM,9.17,59,,FosterWeatherStation201505221600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 05:00:00 PM,9.28,61,,FosterWeatherStation201505221700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 06:00:00 PM,9.89,52,,FosterWeatherStation201505221800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 07:00:00 PM,9.56,58,,FosterWeatherStation201505221900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 08:00:00 PM,9.5,59,,FosterWeatherStation201505222000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 09:00:00 PM,9.78,62,,FosterWeatherStation201505222100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 10:00:00 PM,10.0,66,,FosterWeatherStation201505222200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/22/2015 11:00:00 PM,10.38,63,,FosterWeatherStation201505222300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 08:00:00 AM,13.89,50,,FosterWeatherStation201505230800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 09:00:00 AM,14.05,55,,FosterWeatherStation201505230900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 10:00:00 AM,14.77,50,,FosterWeatherStation201505231000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 11:00:00 AM,14.56,59,,FosterWeatherStation201505231100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 12:00:00 PM,15.49,53,,FosterWeatherStation201505231200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 01:00:00 PM,15.89,53,,FosterWeatherStation201505231300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 03:00:00 PM,16.77,51,,FosterWeatherStation201505231500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 04:00:00 PM,17.17,50,,FosterWeatherStation201505231600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 05:00:00 PM,16.66,51,,FosterWeatherStation201505231700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 06:00:00 PM,17.01,51,,FosterWeatherStation201505231800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 07:00:00 PM,17.17,49,,FosterWeatherStation201505231900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 08:00:00 PM,15.49,55,,FosterWeatherStation201505232000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 09:00:00 PM,15.06,56,,FosterWeatherStation201505232100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 10:00:00 PM,16.39,51,,FosterWeatherStation201505232200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/23/2015 11:00:00 PM,16.39,54,,FosterWeatherStation201505232300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 02:00:00 AM,20.39,40,,FosterWeatherStation201505240200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 03:00:00 AM,20.07,42,,FosterWeatherStation201505240300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 04:00:00 AM,19.56,44,,FosterWeatherStation201505240400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 05:00:00 AM,18.07,50,,FosterWeatherStation201505240500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 06:00:00 AM,15.49,65,,FosterWeatherStation201505240600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 07:00:00 AM,15.57,65,,FosterWeatherStation201505240700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 08:00:00 AM,17.89,62,,FosterWeatherStation201505240800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 10:00:00 AM,14.5,74,,FosterWeatherStation201505241000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 11:00:00 AM,14.4,73,,FosterWeatherStation201505241100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 12:00:00 PM,13.68,77,,FosterWeatherStation201505241200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 03:00:00 PM,13.5,76,,FosterWeatherStation201505241500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 04:00:00 PM,14.4,75,,FosterWeatherStation201505241600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 05:00:00 PM,15.06,87,,FosterWeatherStation201505241700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 06:00:00 PM,12.99,88,,FosterWeatherStation201505241800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 07:00:00 PM,13.89,87,,FosterWeatherStation201505241900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 09:00:00 PM,14.77,87,,FosterWeatherStation201505242100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 10:00:00 PM,14.4,85,,FosterWeatherStation201505242200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 11:00:00 PM,24.01,60,,FosterWeatherStation201505242300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/24/2015 12:00:00 AM,21.0,38,,FosterWeatherStation201505242400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 01:00:00 AM,23.67,62,,FosterWeatherStation201505250100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 02:00:00 AM,23.56,63,,FosterWeatherStation201505250200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 03:00:00 AM,23.16,65,,FosterWeatherStation201505250300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 04:00:00 AM,22.78,68,,FosterWeatherStation201505250400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 05:00:00 AM,22.28,69,,FosterWeatherStation201505250500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 06:00:00 AM,21.99,68,,FosterWeatherStation201505250600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 07:00:00 AM,21.67,75,,FosterWeatherStation201505250700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 09:00:00 AM,23.4,65,,FosterWeatherStation201505250900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 10:00:00 AM,23.05,68,,FosterWeatherStation201505251000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 11:00:00 AM,19.38,85,,FosterWeatherStation201505251100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 12:00:00 PM,21.67,73,,FosterWeatherStation201505251200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 01:00:00 PM,22.06,75,,FosterWeatherStation201505251300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 02:00:00 PM,22.78,65,,FosterWeatherStation201505251400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 03:00:00 PM,24.57,55,,FosterWeatherStation201505251500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 04:00:00 PM,25.0,54,,FosterWeatherStation201505251600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 05:00:00 PM,25.56,52,,FosterWeatherStation201505251700,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 06:00:00 PM,25.9,49,,FosterWeatherStation201505251800,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 07:00:00 PM,25.9,48,,FosterWeatherStation201505251900,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 08:00:00 PM,25.39,50,,FosterWeatherStation201505252000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 09:00:00 PM,24.78,52,,FosterWeatherStation201505252100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 10:00:00 PM,24.17,54,,FosterWeatherStation201505252200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 11:00:00 PM,24.01,54,,FosterWeatherStation201505252300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/25/2015 12:00:00 AM,23.77,61,,FosterWeatherStation201505252400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 01:00:00 AM,22.39,70,,FosterWeatherStation201505260100,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 02:00:00 AM,21.56,76,,FosterWeatherStation201505260200,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 03:00:00 AM,21.0,80,,FosterWeatherStation201505260300,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 04:00:00 AM,20.39,83,,FosterWeatherStation201505260400,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 05:00:00 AM,20.39,83,,FosterWeatherStation201505260500,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 06:00:00 AM,20.39,82,,FosterWeatherStation201505260600,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 10:00:00 AM,15.89,87,,FosterWeatherStation201505261000,Missing critical fields: Barometric Pressure
+Foster Weather Station,05/26/2015 12:00:00 AM,23.05,65,,FosterWeatherStation201505262400,Missing critical fields: Barometric Pressure
+Oak Street Weather Station,05/22/2015 03:00:00 PM,,55,,OakStreetWeatherStation201505221500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 05:00:00 PM,,56,,OakStreetWeatherStation201505221700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 06:00:00 PM,,54,,OakStreetWeatherStation201505221800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 07:00:00 PM,,53,,OakStreetWeatherStation201505221900,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 08:00:00 PM,,52,,OakStreetWeatherStation201505222000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 09:00:00 PM,,58,,OakStreetWeatherStation201505222100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 10:00:00 PM,,58,,OakStreetWeatherStation201505222200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/22/2015 11:00:00 PM,,45,,OakStreetWeatherStation201505222300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 08:00:00 AM,,32,,OakStreetWeatherStation201505230800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 10:00:00 AM,,42,,OakStreetWeatherStation201505231000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 11:00:00 AM,,62,,OakStreetWeatherStation201505231100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 12:00:00 PM,,55,,OakStreetWeatherStation201505231200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 01:00:00 PM,,50,,OakStreetWeatherStation201505231300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 04:00:00 PM,,45,,OakStreetWeatherStation201505231600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 05:00:00 PM,,43,,OakStreetWeatherStation201505231700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 06:00:00 PM,,40,,OakStreetWeatherStation201505231800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 08:00:00 PM,,41,,OakStreetWeatherStation201505232000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 09:00:00 PM,,38,,OakStreetWeatherStation201505232100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 10:00:00 PM,,44,,OakStreetWeatherStation201505232200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/23/2015 11:00:00 PM,,41,,OakStreetWeatherStation201505232300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 02:00:00 AM,,39,,OakStreetWeatherStation201505240200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 03:00:00 AM,,39,,OakStreetWeatherStation201505240300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 04:00:00 AM,,40,,OakStreetWeatherStation201505240400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 05:00:00 AM,,53,,OakStreetWeatherStation201505240500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 06:00:00 AM,,64,,OakStreetWeatherStation201505240600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 07:00:00 AM,,55,,OakStreetWeatherStation201505240700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 08:00:00 AM,,68,,OakStreetWeatherStation201505240800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 09:00:00 AM,,76,,OakStreetWeatherStation201505240900,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 10:00:00 AM,,56,,OakStreetWeatherStation201505241000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 11:00:00 AM,,59,,OakStreetWeatherStation201505241100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 12:00:00 PM,,63,,OakStreetWeatherStation201505241200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 01:00:00 PM,,65,,OakStreetWeatherStation201505241300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 03:00:00 PM,,70,,OakStreetWeatherStation201505241500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 04:00:00 PM,,73,,OakStreetWeatherStation201505241600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 05:00:00 PM,,82,,OakStreetWeatherStation201505241700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 06:00:00 PM,,88,,OakStreetWeatherStation201505241800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 07:00:00 PM,,86,,OakStreetWeatherStation201505241900,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 08:00:00 PM,,87,,OakStreetWeatherStation201505242000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 09:00:00 PM,,82,,OakStreetWeatherStation201505242100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 10:00:00 PM,,84,,OakStreetWeatherStation201505242200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 11:00:00 PM,,65,,OakStreetWeatherStation201505242300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/24/2015 12:00:00 AM,,33,,OakStreetWeatherStation201505242400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 01:00:00 AM,,63,,OakStreetWeatherStation201505250100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 02:00:00 AM,,64,,OakStreetWeatherStation201505250200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 03:00:00 AM,,66,,OakStreetWeatherStation201505250300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 04:00:00 AM,,70,,OakStreetWeatherStation201505250400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 05:00:00 AM,,71,,OakStreetWeatherStation201505250500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 06:00:00 AM,,72,,OakStreetWeatherStation201505250600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 07:00:00 AM,,78,,OakStreetWeatherStation201505250700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 08:00:00 AM,,74,,OakStreetWeatherStation201505250800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 09:00:00 AM,,69,,OakStreetWeatherStation201505250900,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 10:00:00 AM,,72,,OakStreetWeatherStation201505251000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 11:00:00 AM,,85,,OakStreetWeatherStation201505251100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 12:00:00 PM,,74,,OakStreetWeatherStation201505251200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 01:00:00 PM,,78,,OakStreetWeatherStation201505251300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 02:00:00 PM,,65,,OakStreetWeatherStation201505251400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 03:00:00 PM,,58,,OakStreetWeatherStation201505251500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 04:00:00 PM,,54,,OakStreetWeatherStation201505251600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 05:00:00 PM,,55,,OakStreetWeatherStation201505251700,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 06:00:00 PM,,50,,OakStreetWeatherStation201505251800,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 07:00:00 PM,,49,,OakStreetWeatherStation201505251900,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 09:00:00 PM,,52,,OakStreetWeatherStation201505252100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 10:00:00 PM,,52,,OakStreetWeatherStation201505252200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 11:00:00 PM,,58,,OakStreetWeatherStation201505252300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/25/2015 12:00:00 AM,,64,,OakStreetWeatherStation201505252400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 01:00:00 AM,,71,,OakStreetWeatherStation201505260100,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 02:00:00 AM,,76,,OakStreetWeatherStation201505260200,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 03:00:00 AM,,80,,OakStreetWeatherStation201505260300,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 04:00:00 AM,,82,,OakStreetWeatherStation201505260400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 05:00:00 AM,,84,,OakStreetWeatherStation201505260500,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 06:00:00 AM,,83,,OakStreetWeatherStation201505260600,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 10:00:00 AM,,85,,OakStreetWeatherStation201505261000,"Missing critical fields: Air Temperature, Barometric Pressure"
+Oak Street Weather Station,05/26/2015 11:00:00 AM,,84,988.9,OakStreetWeatherStation201505261100,Missing critical fields: Air Temperature
+Oak Street Weather Station,05/26/2015 12:00:00 PM,,79,987.7,OakStreetWeatherStation201505261200,Missing critical fields: Air Temperature
+Oak Street Weather Station,05/26/2015 12:00:00 AM,,66,,OakStreetWeatherStation201505262400,"Missing critical fields: Air Temperature, Barometric Pressure"
+Foster Weather Station,04/17/2020 11:25:00 AM,-15.06,6,3098.5,FosterWeatherStation202004171125,Invalid or out-of-range value in column: Barometric Pressure

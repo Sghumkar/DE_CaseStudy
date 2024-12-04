@@ -2,25 +2,71 @@ from datetime import datetime
 import os
 import pandas as pd
 from src.logger import get_logger
-from config.settings import DATA_DIR, LOG_DIR, QUARANTINE_DIR,PROCESSED_DIR
+from config.settings import DATA_DIR, LOG_DIR, QUARANTINE_DIR
+from db.db_utils import get_db_connection, release_db_connection,create_tables_if_not_exist,insert_raw_data,insert_aggregated_data
 
 logger = get_logger(__name__)
 
-def save_valid_data(df, aggregated_metrics, file_path):
-    
-    valid_folder = PROCESSED_DIR
-    os.makedirs(valid_folder, exist_ok=True)
+def save_valid_data(df, aggregated_metrics_temp):
 
-    base_name = os.path.basename(file_path)
-    valid_file = os.path.join(valid_folder, f"valid_{base_name}")
-    metrics_file = os.path.join(valid_folder, f"metrics_{base_name.replace('.csv', '')}_aggregated.csv")
+    aggregated_metrics=[
+        (
+            row['Source File'],
+            row['Station Name'],
+            row['min_temp'],
+            row['max_temp'],
+            row['avg_temp'],
+            row['std_temp'],
+            row['min_humidity'],
+            row['max_humidity'],
+            row['avg_humidity'],
+            row['std_humidity'],
+            row['min_pressure'],
+            row['max_pressure'],
+            row['avg_pressure'],
+            row['std_pressure']
+        )
+        for _, row in aggregated_metrics_temp.iterrows()
+    ]
 
-    logger.info(f"Saving valid data to: {valid_file}")
-    df.to_csv(valid_file, index=False)
-    logger.info(f"Valid data saved to: {valid_file}")
+    raw_data = [
+        (
+            row['Station Name'],
+            row['Measurement ID'],
+            row['Measurement Timestamp'],
+            row['Air Temperature'],
+            row['Barometric Pressure'],
+            row['Humidity']
+        )
+        for _, row in df.iterrows()
+    ]
 
-    aggregated_metrics.to_csv(metrics_file, index=False)
-    logger.info(f"Aggregated metrics saved to: {metrics_file}")
+
+    conn = None
+    try:
+        conn = get_db_connection()
+
+        logger.info('connection established')
+
+        create_tables_if_not_exist(conn)
+
+        cursor = conn.cursor()
+        insert_raw_data(conn, cursor, raw_data)
+        insert_aggregated_data(conn, cursor, aggregated_metrics)
+        logger.info('Data insertion to db completed')
+
+    except Exception as e:
+        if conn:
+            conn.rollback()
+        print(f"Error saving data to the database: {e}")
+        raise
+
+    finally:
+        if conn:
+            release_db_connection(conn)
+
+
+
 
 
 def save_failed_rows(failed_df, reasons, file_path):
@@ -30,7 +76,6 @@ def save_failed_rows(failed_df, reasons, file_path):
     base_name = os.path.basename(file_path)
     quarantine_file = os.path.join(QUARANTINE_DIR, f"failed_{base_name}")
 
-    logger.info(f"Saving failed rows to quarantine: {quarantine_file}")
     failed_df.to_csv(quarantine_file, index=False)
     logger.info(f"Failed rows saved to: {quarantine_file}")
 

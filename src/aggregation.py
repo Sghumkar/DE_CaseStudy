@@ -1,17 +1,14 @@
-# src/aggregation.py
-import pandas as pd
+import os
 from src.logger import get_logger
-from src.metadata import add_metadata
-from datetime import datetime
+
 logger = get_logger(__name__)
 
 def calculate_aggregated_metrics(df,file_path):
 
-    logger.info(f"DataFrame dtypes:\n\n{df}")
     
-    metrics_with_metadata=add_metadata(df, file_path)
+    df['Source File'] = os.path.basename(file_path)
     
-    metrics = metrics_with_metadata.groupby(['Source File', 'Station Name']).agg(
+    metrics = df.groupby(['Source File', 'Station Name']).agg(
         min_temp=('Air Temperature', 'min'),
         max_temp=('Air Temperature', 'max'),
         avg_temp=('Air Temperature', 'mean'),
@@ -26,8 +23,8 @@ def calculate_aggregated_metrics(df,file_path):
         std_pressure=('Barometric Pressure', 'std')
     ).reset_index()
     
-    metrics['Processed At'] = datetime.now()
-    metrics.rename(columns={'Station Name': 'Data Source'}, inplace=True)
+    logger.info(f'Aggregation completed for file: {file_path}')
+    
 
     
     return metrics
