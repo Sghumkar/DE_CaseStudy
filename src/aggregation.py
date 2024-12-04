@@ -5,7 +5,7 @@ logger = get_logger(__name__)
 
 def calculate_aggregated_metrics(df,file_path):
 
-    
+
     df['Source File'] = os.path.basename(file_path)
     
     metrics = df.groupby(['Source File', 'Station Name']).agg(
@@ -25,6 +25,5 @@ def calculate_aggregated_metrics(df,file_path):
     
     logger.info(f'Aggregation completed for file: {file_path}')
     
-
     
     return metrics

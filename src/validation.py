@@ -73,24 +73,3 @@ def validate_timestamp_format(df, failed_rows, reasons, logger):
     return valid_rows, failed_rows, reasons
 
 
-def remove_duplicate_rows(df, failed_rows, reasons, logger):
-
-    logger.info("Starting duplicate row check...")
-
-    duplicate_check_columns = ['Measurement ID']
-    duplicates = df[df.duplicated(subset=duplicate_check_columns, keep=False)]
-
-    if not duplicates.empty:
-        logger.warning(f"Found {len(duplicates)} duplicate rows.")
-        for index,row in duplicates.iterrows():
-            failed_rows.append(row.to_dict())
-            reasons.append("Duplicate row")
-    
-    valid_rows = df.drop_duplicates(subset=duplicate_check_columns, keep='first')
-
-    if valid_rows.empty:
-        logger.warning("No valid rows left after removing duplicates.")
-        return None, failed_rows, reasons
-    
-    logger.info(f"Valid rows remaining after duplicate removal: {len(valid_rows)}")
-    return valid_rows, failed_rows, reasons

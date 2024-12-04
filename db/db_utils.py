@@ -1,7 +1,8 @@
 from psycopg2 import pool
 from config.settings import DB_CONFIG, TABLES
 from src.logger import get_logger
-
+import psycopg2
+import pandas as pd
 from db.retry_utils import retry_operation
 
 logger = get_logger(__name__)
@@ -63,11 +64,11 @@ def create_tables_if_not_exist(conn):
                 CREATE TABLE {raw_sensor_table} (
                     station_name TEXT NOT NULL,
                     measurement_timestamp TIMESTAMP NOT NULL,
-                    measurement_id TEXT NOT NULL UNIQUE,
                     air_temperature REAL,
                     humidity INT,
                     barometric_pressure REAL,
                     processed_at TIMESTAMP DEFAULT NOW(),
+                    measurement_id TEXT NOT NULL UNIQUE,
                     PRIMARY KEY (measurement_id)
                 );
                 """)
@@ -111,46 +112,97 @@ def create_tables_if_not_exist(conn):
             conn.commit()
 
     retry_operation(table_creation)
-def insert_raw_data(conn, cursor,raw_data):
+
+def insert_raw_data(conn, cursor, raw_data, cols):
+    valid_rows = []  
+    invalid_rows = []  
+
     raw_data_query = f"""
-            INSERT INTO {raw_sensor_table} (
-                station_name,
-                measurement_id,
-                measurement_timestamp,
-                air_temperature,
-                humidity,
-                barometric_pressure,
-                processed_at
-            )
-            VALUES (%s, %s, %s, %s, %s, %s, NOW())
-        """
-    cursor.executemany(raw_data_query, raw_data)
-    conn.commit()
-    logger.info(f"{len(raw_data)} rows inserted into {raw_sensor_table}.")
+        INSERT INTO {raw_sensor_table} (
+            station_name,
+            measurement_timestamp,
+            air_temperature,
+            humidity,
+            barometric_pressure,
+            measurement_id,
+            processed_at
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, NOW())
+    """
+    
+    try:
+        # Attempt batch insertion
+        cursor.executemany(raw_data_query, raw_data)
+        conn.commit()  # Commit the transaction for batch insert
+        valid_rows = raw_data
+        logger.info(f"Successfully inserted {len(valid_rows)} rows in batch.")
+    except psycopg2.Error as e:
+        # Rollback the transaction to prevent the failure from affecting future inserts
+        conn.rollback()
+        logger.warning(f"Batch insert failed: {e}. Falling back to row-by-row insertion.")
+        
+        # Attempt row-by-row insertion for valid rows
+        for row in raw_data:
+            try:
+                cursor.execute(raw_data_query, row)
+                conn.commit()  # Commit for each successful row
+                valid_rows.append(row)
+            except psycopg2.Error as row_error:
+                logger.warning(f"Failed to insert row {row}: {row_error}")
+                conn.rollback()  # Rollback only for the failed row
+                invalid_rows.append(row)
 
-def insert_aggregated_data(conn, cursor,aggregated_metrics):
+    logger.info(f"Successfully inserted {len(valid_rows)} rows, failed to insert {len(invalid_rows)} rows.")
+    
+    # Create a DataFrame from valid rows
+    rdf = pd.DataFrame(valid_rows, columns=cols)
+    return rdf
+
+
+def insert_aggregated_data(conn, cursor, aggregated_metrics):
     aggregated_data_query = f"""
-            INSERT INTO {aggregated_metrics_table} (
-                source_file,
-                station_name,
-                min_temp,
-                max_temp,
-                avg_temp,
-                std_temp,
-                min_humidity,
-                max_humidity,
-                avg_humidity,
-                std_humidity,
-                min_pressure,
-                max_pressure,
-                avg_pressure,
-                std_pressure,
-                processed_at
-            )
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW())
-        """
-    cursor.executemany(aggregated_data_query, aggregated_metrics)
+        INSERT INTO {aggregated_metrics_table} (
+            source_file,
+            station_name,
+            min_temp,
+            max_temp,
+            avg_temp,
+            std_temp,
+            min_humidity,
+            max_humidity,
+            avg_humidity,
+            std_humidity,
+            min_pressure,
+            max_pressure,
+            avg_pressure,
+            std_pressure,
+            processed_at
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW())
+    """
 
-    conn.commit()
+    valid_rows = []
+    invalid_rows = []
+    
+    for row in aggregated_metrics:
+        try:
+            cursor.execute(f"""
+                SELECT 1 FROM {aggregated_metrics_table} WHERE source_file = %s AND station_name = %s
+            """, (row[0], row[1]))  
+            if cursor.fetchone() is None:  
+                valid_rows.append(row)
+            else:
+                invalid_rows.append(row)
+        except Exception as e:
+            logger.error(f"Error checking primary key for row {row}: {e}")
+            invalid_rows.append(row)
 
-    logger.info(f"{len(aggregated_metrics)} rows inserted into {aggregated_metrics_table}.")
+    if valid_rows:
+        cursor.executemany(aggregated_data_query, valid_rows)
+        conn.commit()
+        logger.info(f"{len(valid_rows)} rows inserted into {aggregated_metrics_table}.")
+    
+    if invalid_rows:
+        logger.warning(f"Skipped {len(invalid_rows)} rows due to primary key violations.")
+    
+    return valid_rows, invalid_rows
