@@ -74,7 +74,7 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
 ## **Project Structure**
 
 ```
-sensor-data-pipeline/
+DE_CaseStudy/
 │
 ├── src/                         # Source code
 │   ├── aggregation.py           # Data aggregation functions
