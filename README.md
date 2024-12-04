@@ -76,8 +76,6 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
 ```
 sensor-data-pipeline/
 │
-├── data/                        # Folder for raw and processed data
-├── logs/                        # Folder for log files
 ├── src/                         # Source code
 │   ├── aggregation.py           # Data aggregation functions
 │   ├── data_handler.py          # File processing pipeline
