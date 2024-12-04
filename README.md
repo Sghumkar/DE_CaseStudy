@@ -2,7 +2,7 @@
 # **Sensor Data Processing Pipeline**
 
 ## **Overview**
-This pipeline processes and analyzes sensor data stored in a PostgreSQL database. Aggregations such as minimum, maximum, mean, and standard deviation are calculated for key measurements.
+This pipeline processes and analyzes sensor data and stores in a PostgreSQL database. Aggregations such as minimum, maximum, mean, and standard deviation are calculated for key measurements.
 
 ---
 
@@ -45,7 +45,6 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
    - Run the following commands:  
      ```bash
      python3 -m venv env
-     source env/bin/activate   # On macOS/Linux
      env\Scripts\activate      # On Windows
      ```
 
@@ -100,6 +99,6 @@ DE_CaseStudy/
 ## **Contributors**
 - **Your Name**  
 
-For questions or feedback, please reach out to **[Your Email](mailto:swapnalighumkarw@gmail.com)**.
+For questions or feedback, please reach out to **[:swapnalighumkarw@gmail.com](mailto:swapnalighumkarw@gmail.com)**.
 
 ---
