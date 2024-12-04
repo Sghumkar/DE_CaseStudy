@@ -1,0 +1,411 @@
+2024-12-04 11:32:45,495 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 11:32:45,496 - main.py - <module> - CRITICAL - Critical error in pipeline: name 'os' is not defined
+Traceback (most recent call last):
+  File "c:\Users\GhumkaS\Desktop\tasks\main.py", line 9, in <module>
+    os.makedirs(DATA_DIR, exist_ok=True)
+    ^^
+NameError: name 'os' is not defined
+2024-12-04 11:33:01,891 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 11:33:01,894 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 11:33:27,082 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:33:27,093 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:33:27,094 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:33:27,474 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:33:37,852 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:33:37,859 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:33:37,900 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:33:37,903 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:33:37,908 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:33:37,922 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:33:37,926 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:33:39,091 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:33:39,091 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:33:39,112 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original.csv
+2024-12-04 11:33:39,168 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:34:15,121 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:34:15,393 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:34:25,557 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:34:25,564 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:34:25,607 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:34:25,610 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:34:25,614 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:34:25,630 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:34:25,633 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:34:26,840 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:34:26,841 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:34:26,855 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original.csv
+2024-12-04 11:34:26,899 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:35:05,153 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:35:05,605 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:35:15,529 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:35:15,537 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:35:15,582 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:35:15,585 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:35:15,589 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:35:15,605 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:35:15,609 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:35:16,842 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:35:16,842 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:35:16,858 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original.csv
+2024-12-04 11:35:16,903 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 11:43:17,131 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 11:43:17,132 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 11:43:21,830 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:43:21,830 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:43:21,831 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:43:23,845 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:43:24,292 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:43:34,195 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:43:34,203 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:43:34,241 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:43:34,244 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:43:34,248 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:43:34,264 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:43:34,267 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:43:35,439 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:43:35,440 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:43:35,458 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy.csv
+2024-12-04 11:43:35,509 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:44:13,714 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:44:14,025 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:44:23,519 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:44:23,526 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:44:23,562 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:44:23,565 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:44:23,570 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:44:23,588 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:44:23,592 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:44:24,804 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:44:24,804 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:44:24,819 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy.csv
+2024-12-04 11:44:24,864 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 11:58:11,819 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 11:58:11,819 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 11:58:15,807 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:58:15,807 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:58:15,807 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:58:17,817 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:58:18,158 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:58:26,673 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:58:26,680 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:58:26,711 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:58:26,714 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:58:26,718 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:58:26,731 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:58:26,735 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:58:27,744 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:58:27,744 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:58:27,761 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy.csv
+2024-12-04 11:58:27,802 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:59:00,971 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 11:59:01,217 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 11:59:09,619 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 11:59:09,627 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 11:59:09,667 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 11:59:09,669 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 11:59:09,673 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 11:59:09,693 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 11:59:09,697 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 11:59:10,876 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 11:59:10,876 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 11:59:10,890 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy.csv
+2024-12-04 11:59:10,934 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy.csv
+2024-12-04 12:03:25,716 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:03:25,717 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:03:36,849 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:03:36,849 - data_handler.py - process_file - INFO - Starting to process file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:03:36,849 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv with 3 retries left.
+2024-12-04 12:03:36,850 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:03:38,860 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:03:39,269 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:03:47,376 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:03:47,383 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:03:47,416 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:03:47,419 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:03:47,422 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:03:47,436 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:03:47,440 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:03:48,462 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:03:48,462 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:03:48,477 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy.csv
+2024-12-04 12:03:48,520 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:04:22,995 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:04:23,258 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:04:31,640 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:04:31,648 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:04:31,687 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:04:31,690 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:04:31,694 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:04:31,709 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:04:31,713 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:04:32,747 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:04:32,747 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:04:32,760 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy.csv
+2024-12-04 12:04:32,800 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy.csv
+2024-12-04 12:05:21,751 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:05:21,752 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:05:26,754 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:05:26,754 - data_handler.py - process_file - INFO - Starting to process file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:05:26,754 - data_handler.py - process_file - ERROR - File c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy.csv failed after maximum retries.
+2024-12-04 12:05:26,755 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:09,049 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:06:09,050 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:06:10,847 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:10,847 - data_handler.py - process_file - INFO - Starting to process file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:10,847 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv with 1 retries left.
+2024-12-04 12:06:10,848 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:12,857 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:13,105 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:06:21,109 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:06:21,115 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:06:21,157 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:06:21,161 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:06:21,165 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:06:21,181 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:06:21,184 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:06:22,251 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:06:22,251 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:06:22,269 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:22,321 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:55,422 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:06:55,690 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:07:03,724 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:07:03,731 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:07:03,764 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:07:03,768 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:07:03,772 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:07:03,787 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:07:03,790 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:07:04,800 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:07:04,800 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:07:04,814 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:07:04,861 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:16,505 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:08:16,506 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:08:24,136 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:24,136 - data_handler.py - process_file - INFO - Starting to process file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:24,136 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv with 2 retries left.
+2024-12-04 12:08:24,137 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:26,147 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:26,538 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:08:34,757 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:08:34,763 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:08:34,796 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:08:34,799 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:08:34,803 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:08:34,816 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:08:34,820 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:08:35,821 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:08:35,821 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:08:35,836 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:08:35,881 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:09:09,114 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:09:09,355 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:09:17,913 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:09:17,920 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:09:17,956 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:09:17,960 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:09:17,964 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:09:17,979 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:09:17,983 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:09:19,109 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:09:19,110 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:09:19,125 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:09:19,173 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:17,522 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:21:17,523 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:21:23,415 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:23,416 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:23,416 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:23,425 - data_processor.py - file_processing - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:21:23,434 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:23,434 - data_handler.py - process_file - INFO - No rows to display: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:21:23,435 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:03,886 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:23:03,888 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:23:06,469 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:06,470 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:06,470 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:06,478 - data_processor.py - file_processing - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:23:06,489 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:06,489 - data_handler.py - process_file - INFO - No rows to display: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:23:06,490 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:27:55,804 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:27:55,805 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:28:03,547 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:03,547 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:03,548 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:03,998 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:28:14,902 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:28:14,913 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:28:14,975 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:28:14,979 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:28:14,985 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:28:15,007 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:28:15,012 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:28:16,505 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:28:16,506 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:28:16,522 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:16,586 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:53,494 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:28:53,870 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:29:04,129 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:29:04,137 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:29:04,186 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:29:04,190 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:29:04,194 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:29:04,212 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:29:04,215 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:29:05,554 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:29:05,555 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:29:05,572 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:29:05,635 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:29:45,785 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:29:46,167 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:29:58,402 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:29:58,411 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:29:58,457 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:29:58,461 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:29:58,467 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:29:58,488 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:29:58,493 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:30:00,116 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:30:00,117 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:30:00,134 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:30:00,227 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:30:34,067 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:30:34,074 - file_utils.py - log_error - ERROR - Error logged: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:30:34,094 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:00,304 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:33:00,305 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:33:01,226 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:01,227 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:01,227 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:01,241 - data_processor.py - file_processing - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:33:01,257 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:01,258 - data_handler.py - process_file - INFO - No rows to display: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:33:01,258 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:34,729 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:38:34,731 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:38:40,756 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:40,757 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:40,757 - data_processor.py - file_processing - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:40,772 - data_processor.py - file_processing - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:38:40,788 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:40,788 - data_handler.py - process_file - INFO - No rows to display: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:38:40,789 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:41:06,088 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:41:06,090 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:41:07,634 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:41:07,634 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:41:07,635 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:41:07,648 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:41:07,649 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv in 2 seconds...
+2024-12-04 12:41:07,650 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: name 'time' is not defined
+2024-12-04 12:41:07,670 - file_utils.py - log_error - ERROR - Error logged: name 'time' is not defined
+2024-12-04 12:41:07,671 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:41:51,463 - monitor.py - monitor_directory - INFO - Stopping directory monitor due to keyboard interrupt.
+2024-12-04 12:42:00,266 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:42:00,267 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:42:05,192 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:42:05,192 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:42:05,193 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:42:05,207 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv'
+2024-12-04 12:42:05,207 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv in 2 seconds...
+2024-12-04 12:42:05,208 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv: name 'time' is not defined
+2024-12-04 12:42:05,218 - file_utils.py - log_error - ERROR - Error logged: name 'time' is not defined
+2024-12-04 12:42:05,219 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv
+2024-12-04 12:42:56,264 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv
+2024-12-04 12:42:56,265 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv
+2024-12-04 12:42:56,265 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv
+2024-12-04 12:42:56,267 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\id_output.csv'
+2024-12-04 12:42:56,268 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv in 2 seconds...
+2024-12-04 12:42:56,268 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv: name 'time' is not defined
+2024-12-04 12:42:56,274 - file_utils.py - log_error - ERROR - Error logged: name 'time' is not defined
+2024-12-04 12:42:56,274 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv
+2024-12-04 12:44:35,971 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:44:35,972 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:44:52,405 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:44:52,405 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:44:52,406 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:44:52,417 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original.csv'
+2024-12-04 12:44:52,418 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\original.csv in 2 seconds...
+2024-12-04 12:44:54,419 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:44:54,759 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:45:05,172 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:45:05,178 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:45:05,218 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:45:05,222 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:45:05,226 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:45:05,241 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:45:05,246 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:45:06,421 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:45:06,421 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:45:06,438 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original.csv
+2024-12-04 12:45:06,484 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:45:40,096 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\original.csv: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:45:40,104 - file_utils.py - log_error - ERROR - Error logged: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:45:40,122 - data_handler.py - process_file - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original.csv
+2024-12-04 12:51:01,483 - main.py - <module> - INFO - Starting the file monitoring pipeline.
+2024-12-04 12:51:01,485 - monitor.py - monitor_directory - INFO - Monitoring directory: c:\Users\GhumkaS\Desktop\tasks\data
+2024-12-04 12:51:05,090 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:51:05,090 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:51:05,091 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:51:05,102 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\original - Copy.csv'
+2024-12-04 12:51:05,103 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv in 2 seconds...
+2024-12-04 12:51:07,105 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:51:07,570 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:51:18,523 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 154689
+2024-12-04 12:51:18,533 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:51:18,595 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 154689
+2024-12-04 12:51:18,601 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:51:18,612 - validation.py - validate_numeric_columns - WARNING - Found 1 invalid or out-of-range entries in column: Barometric Pressure
+2024-12-04 12:51:18,642 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 154688
+2024-12-04 12:51:18,647 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:51:20,568 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:51:20,569 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 154688
+2024-12-04 12:51:20,587 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_original - Copy.csv
+2024-12-04 12:51:20,646 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:51:32,742 - db_utils.py - table_creation - INFO - Table 'public.raw_sensor_data' created.
+2024-12-04 12:51:32,773 - db_utils.py - table_creation - INFO - Index 'idx_raw_sensor_station_time' created for 'public.raw_sensor_data'.
+2024-12-04 12:51:32,815 - db_utils.py - table_creation - INFO - Table 'public.aggregated_metrics' created.
+2024-12-04 12:51:32,830 - db_utils.py - table_creation - INFO - Index 'idx_aggregated_metrics_station_name' created for 'public.aggregated_metrics'.
+2024-12-04 12:54:11,620 - db_utils.py - insert_raw_data - INFO - 154688 rows inserted into public.raw_sensor_data.
+2024-12-04 12:54:11,638 - db_utils.py - insert_aggregated_data - INFO - 3 rows inserted into public.aggregated_metrics.
+2024-12-04 12:54:11,639 - file_utils.py - db_operations - INFO - Data insertion to db completed
+2024-12-04 12:54:11,653 - data_processor.py - validate_and_transform - INFO - Processing complete for file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv
+2024-12-04 12:54:11,663 - data_handler.py - process_file - INFO - Processing of file: c:\Users\GhumkaS\Desktop\tasks\data\original - Copy.csv completed.
+2024-12-04 12:54:11,664 - data_handler.py - process_file - INFO - Waithing for new File
+2024-12-04 12:55:26,427 - monitor.py - on_created - INFO - New file detected: c:\Users\GhumkaS\Desktop\tasks\data\testing.csv
+2024-12-04 12:55:26,428 - data_handler.py - process_file - INFO - Processing file: c:\Users\GhumkaS\Desktop\tasks\data\testing.csv
+2024-12-04 12:55:26,428 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\testing.csv
+2024-12-04 12:55:26,431 - data_processor.py - read_file_with_retry - ERROR - Error reading file c:\Users\GhumkaS\Desktop\tasks\data\testing.csv on attempt 1: [Errno 13] Permission denied: 'c:\\Users\\GhumkaS\\Desktop\\tasks\\data\\testing.csv'
+2024-12-04 12:55:26,431 - data_processor.py - read_file_with_retry - INFO - Retrying reading file c:\Users\GhumkaS\Desktop\tasks\data\testing.csv in 2 seconds...
+2024-12-04 12:55:28,432 - data_processor.py - read_file_with_retry - INFO - Starting to process the file: c:\Users\GhumkaS\Desktop\tasks\data\testing.csv
+2024-12-04 12:55:28,436 - validation.py - check_missing_values - INFO - Starting check for missing critical fields...
+2024-12-04 12:55:28,439 - validation.py - check_missing_values - INFO - Valid rows remaining after checking missing values: 6
+2024-12-04 12:55:28,439 - validation.py - remove_duplicate_rows - INFO - Starting duplicate row check...
+2024-12-04 12:55:28,440 - validation.py - remove_duplicate_rows - WARNING - Found 6 duplicate rows.
+2024-12-04 12:55:28,442 - validation.py - remove_duplicate_rows - INFO - Valid rows remaining after duplicate removal: 1
+2024-12-04 12:55:28,443 - validation.py - validate_numeric_columns - INFO - Starting validation for numeric columns...
+2024-12-04 12:55:28,449 - validation.py - validate_numeric_columns - INFO - Valid rows remaining after numeric validation: 1
+2024-12-04 12:55:28,450 - validation.py - validate_timestamp_format - INFO - Starting timestamp format validation...
+2024-12-04 12:55:28,454 - validation.py - validate_timestamp_format - INFO - Converted 'Measurement Timestamp' to datetime format for valid rows.
+2024-12-04 12:55:28,455 - validation.py - validate_timestamp_format - INFO - Remaining valid rows after timestamp validation: 1
+2024-12-04 12:55:28,465 - file_utils.py - save_failed_rows - INFO - Failed rows saved to: c:\Users\GhumkaS\Desktop\tasks\quarantine\failed_testing.csv
+2024-12-04 12:55:28,475 - aggregation.py - calculate_aggregated_metrics - INFO - Aggregation completed for file: c:\Users\GhumkaS\Desktop\tasks\data\testing.csv
+2024-12-04 12:55:34,729 - data_handler.py - process_file - ERROR - Error processing file c:\Users\GhumkaS\Desktop\tasks\data\testing.csv: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:55:34,736 - file_utils.py - log_error - ERROR - Error logged: duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:55:34,736 - data_handler.py - process_file - INFO - Waithing for new File

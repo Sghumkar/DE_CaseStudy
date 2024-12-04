@@ -3,70 +3,53 @@ import os
 import pandas as pd
 from src.logger import get_logger
 from config.settings import DATA_DIR, LOG_DIR, QUARANTINE_DIR
+from db.retry_utils import retry_operation
 from db.db_utils import get_db_connection, release_db_connection,create_tables_if_not_exist,insert_raw_data,insert_aggregated_data
 
 logger = get_logger(__name__)
-
 def save_valid_data(df, aggregated_metrics_temp):
+    def db_operations():
+        aggregated_metrics = [
+            (
+                row['Source File'],
+                row['Station Name'],
+                row['min_temp'],
+                row['max_temp'],
+                row['avg_temp'],
+                row['std_temp'],
+                row['min_humidity'],
+                row['max_humidity'],
+                row['avg_humidity'],
+                row['std_humidity'],
+                row['min_pressure'],
+                row['max_pressure'],
+                row['avg_pressure'],
+                row['std_pressure']
+            )
+            for _, row in aggregated_metrics_temp.iterrows()
+        ]
+        raw_data = [
+            (
+                row['Station Name'],
+                row['Measurement ID'],
+                row['Measurement Timestamp'],
+                row['Air Temperature'],
+                row['Barometric Pressure'],
+                row['Humidity']
+            )
+            for _, row in df.iterrows()
+        ]
 
-    aggregated_metrics=[
-        (
-            row['Source File'],
-            row['Station Name'],
-            row['min_temp'],
-            row['max_temp'],
-            row['avg_temp'],
-            row['std_temp'],
-            row['min_humidity'],
-            row['max_humidity'],
-            row['avg_humidity'],
-            row['std_humidity'],
-            row['min_pressure'],
-            row['max_pressure'],
-            row['avg_pressure'],
-            row['std_pressure']
-        )
-        for _, row in aggregated_metrics_temp.iterrows()
-    ]
-
-    raw_data = [
-        (
-            row['Station Name'],
-            row['Measurement ID'],
-            row['Measurement Timestamp'],
-            row['Air Temperature'],
-            row['Barometric Pressure'],
-            row['Humidity']
-        )
-        for _, row in df.iterrows()
-    ]
-
-
-    conn = None
-    try:
         conn = get_db_connection()
-
-        logger.info('connection established')
-
         create_tables_if_not_exist(conn)
-
         cursor = conn.cursor()
         insert_raw_data(conn, cursor, raw_data)
         insert_aggregated_data(conn, cursor, aggregated_metrics)
+        conn.commit()
+        release_db_connection(conn)
         logger.info('Data insertion to db completed')
 
-    except Exception as e:
-        if conn:
-            conn.rollback()
-        print(f"Error saving data to the database: {e}")
-        raise
-
-    finally:
-        if conn:
-            release_db_connection(conn)
-
-
-
+    retry_operation(db_operations, max_retries=3, delay=2, backoff=2, file_path="Database Operations")
 
 
 def save_failed_rows(failed_df, reasons, file_path):

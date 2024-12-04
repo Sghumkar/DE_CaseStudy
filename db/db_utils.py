@@ -2,6 +2,8 @@ from psycopg2 import pool
 from config.settings import DB_CONFIG, TABLES
 from src.logger import get_logger
 
+from db.retry_utils import retry_operation
+
 logger = get_logger(__name__)
 
 schema_name = DB_CONFIG['schema']
@@ -54,73 +56,61 @@ def index_exists(conn, table_name, index_name):
         return cursor.fetchone()[0]
 
 def create_tables_if_not_exist(conn):
+    def table_creation():
+        with conn.cursor() as cursor:
+            if not table_exists(conn, TABLES['raw_sensor_data']):
+                cursor.execute(f"""
+                CREATE TABLE {raw_sensor_table} (
+                    station_name TEXT NOT NULL,
+                    measurement_timestamp TIMESTAMP NOT NULL,
+                    measurement_id TEXT NOT NULL UNIQUE,
+                    air_temperature REAL,
+                    humidity INT,
+                    barometric_pressure REAL,
+                    processed_at TIMESTAMP DEFAULT NOW(),
+                    PRIMARY KEY (measurement_id)
+                );
+                """)
+                logger.info(f"Table '{raw_sensor_table}' created.")
+            if not index_exists(conn, TABLES['raw_sensor_data'], 'idx_raw_sensor_station_time'):
+                cursor.execute(f"""
+                CREATE INDEX idx_raw_sensor_station_time
+                ON {raw_sensor_table} (station_name, measurement_timestamp);
+                """)
+                logger.info(f"Index 'idx_raw_sensor_station_time' created for '{raw_sensor_table}'.")
+            
+            if not table_exists(conn, TABLES['aggregated_metrics']):
+                cursor.execute(f"""
+                CREATE TABLE {aggregated_metrics_table} (
+                    source_file TEXT NOT NULL ,
+                    station_name TEXT NOT NULL,
+                    min_temp REAL,
+                    max_temp REAL,
+                    avg_temp REAL,
+                    std_temp REAL,
+                    min_humidity INT,
+                    max_humidity INT,
+                    avg_humidity REAL,
+                    std_humidity REAL,
+                    min_pressure REAL,
+                    max_pressure REAL,
+                    avg_pressure REAL,
+                    std_pressure REAL,
+                    processed_at TIMESTAMP DEFAULT NOW(),
+                    PRIMARY KEY (source_file, station_name)
+                );
+                """)
+                logger.info(f"Table '{aggregated_metrics_table}' created.")
+            if not index_exists(conn, TABLES['aggregated_metrics'], 'idx_aggregated_metrics_station_name'):
+                cursor.execute(f"""
+                CREATE INDEX idx_aggregated_metrics_station_name
+                ON {aggregated_metrics_table} (station_name, source_file);
+                """)
+                logger.info(f"Index 'idx_aggregated_metrics_station_name' created for '{aggregated_metrics_table}'.")
+            
+            conn.commit()
 
-    create_schema_if_not_exist(conn)
-
-    with conn.cursor() as cursor:
-        if not table_exists(conn, TABLES['raw_sensor_data']):
-            cursor.execute(f"""
-            CREATE TABLE {raw_sensor_table} (
-                station_name TEXT NOT NULL,
-                measurement_timestamp TIMESTAMP NOT NULL,
-                measurement_id TEXT NOT NULL,
-                air_temperature REAL,
-                humidity INT,
-                barometric_pressure REAL,
-                processed_at TIMESTAMP DEFAULT NOW(),
-                PRIMARY KEY (measurement_id)
-            );
-            """)
-            logger.info(f"Table '{raw_sensor_table}' created.")
-        else:
-            logger.info(f"Table '{raw_sensor_table}' already exists.")
-
-        if not index_exists(conn, TABLES['raw_sensor_data'], 'idx_raw_sensor_station_time'):
-            cursor.execute(f"""
-            CREATE INDEX idx_raw_sensor_station_time
-            ON {raw_sensor_table} (station_name, measurement_timestamp);
-            """)
-            logger.info(f"Index 'idx_raw_sensor_station_time' created for '{raw_sensor_table}'.")
-        else:
-            logger.info(f"Index 'idx_raw_sensor_station_time' already exists for '{raw_sensor_table}'")
-
-        if not table_exists(conn, TABLES['aggregated_metrics']):
-            cursor.execute(f"""
-            CREATE TABLE {aggregated_metrics_table} (
-                source_file TEXT NOT NULL,
-                station_name TEXT NOT NULL,
-                min_temp REAL,
-                max_temp REAL,
-                avg_temp REAL,
-                std_temp REAL,
-                min_humidity INT,
-                max_humidity INT,
-                avg_humidity REAL,
-                std_humidity REAL,
-                min_pressure REAL,
-                max_pressure REAL,
-                avg_pressure REAL,
-                std_pressure REAL,
-                processed_at TIMESTAMP DEFAULT NOW(),
-                PRIMARY KEY (source_file, station_name)
-            );
-            """)
-            logger.info(f"Table '{aggregated_metrics_table}' created.")
-        else:
-            logger.info(f"Table '{aggregated_metrics_table}' already exists.")
-
-        # Create index for aggregated_metrics table
-        if not index_exists(conn, TABLES['aggregated_metrics'], 'idx_aggregated_metrics_station_name'):
-            cursor.execute(f"""
-            CREATE INDEX idx_aggregated_metrics_station_name
-            ON {aggregated_metrics_table} (station_name, source_file);
-            """)
-            logger.info(f"Index 'idx_aggregated_metrics_station_name' created for '{aggregated_metrics_table}'.")
-        else:
-            logger.info(f"Index 'idx_aggregated_metrics_station_name' already exists for '{aggregated_metrics_table}'")
-
-        conn.commit()
-
+    retry_operation(table_creation)
 def insert_raw_data(conn, cursor,raw_data):
     raw_data_query = f"""
             INSERT INTO {raw_sensor_table} (
@@ -133,7 +123,6 @@ def insert_raw_data(conn, cursor,raw_data):
                 processed_at
             )
             VALUES (%s, %s, %s, %s, %s, %s, NOW())
-            ON CONFLICT (measurement_id) DO NOTHING;
         """
     cursor.executemany(raw_data_query, raw_data)
     conn.commit()
@@ -159,7 +148,6 @@ def insert_aggregated_data(conn, cursor,aggregated_metrics):
                 processed_at
             )
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW())
-            ON CONFLICT (source_file, station_name) DO NOTHING;
         """
     cursor.executemany(aggregated_data_query, aggregated_metrics)
 

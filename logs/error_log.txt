@@ -1,0 +1,12 @@
+2024-12-04 12:30:34.071146 - c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv - duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:41:07.654768 - c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv - name 'time' is not defined
+2024-12-04 12:42:05.211824 - c:\Users\GhumkaS\Desktop\tasks\data\original - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy - Copy.csv - name 'time' is not defined
+2024-12-04 12:42:56.270209 - c:\Users\GhumkaS\Desktop\tasks\data\id_output.csv - name 'time' is not defined
+2024-12-04 12:45:40.099882 - c:\Users\GhumkaS\Desktop\tasks\data\original.csv - duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
+2024-12-04 12:55:34.732111 - c:\Users\GhumkaS\Desktop\tasks\data\testing.csv - duplicate key value violates unique constraint "raw_sensor_data_pkey"
+DETAIL:  Key (measurement_id)=(FosterWeatherStation201510100300) already exists.
+
