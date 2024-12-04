@@ -131,30 +131,26 @@ def insert_raw_data(conn, cursor, raw_data, cols):
     """
     
     try:
-        # Attempt batch insertion
         cursor.executemany(raw_data_query, raw_data)
-        conn.commit()  # Commit the transaction for batch insert
+        conn.commit() 
         valid_rows = raw_data
         logger.info(f"Successfully inserted {len(valid_rows)} rows in batch.")
     except psycopg2.Error as e:
-        # Rollback the transaction to prevent the failure from affecting future inserts
         conn.rollback()
         logger.warning(f"Batch insert failed: {e}. Falling back to row-by-row insertion.")
         
-        # Attempt row-by-row insertion for valid rows
         for row in raw_data:
             try:
                 cursor.execute(raw_data_query, row)
-                conn.commit()  # Commit for each successful row
+                conn.commit()  
                 valid_rows.append(row)
             except psycopg2.Error as row_error:
                 logger.warning(f"Failed to insert row {row}: {row_error}")
-                conn.rollback()  # Rollback only for the failed row
+                conn.rollback()  
                 invalid_rows.append(row)
 
     logger.info(f"Successfully inserted {len(valid_rows)} rows, failed to insert {len(invalid_rows)} rows.")
     
-    # Create a DataFrame from valid rows
     rdf = pd.DataFrame(valid_rows, columns=cols)
     return rdf
 
