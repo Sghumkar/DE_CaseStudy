@@ -1,8 +1,0 @@
-Station Name,Measurement Timestamp,Air Temperature,Humidity,Barometric Pressure,Measurement ID,Reason for Failure
-Foster Weather Station,10/10/2015 03:00:00 AM,34,120,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,3004,64,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,30004,64,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,94,64,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,94,64,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,94,64,1000.7,FosterWeatherStation201510100300,Duplicate row
-Foster Weather Station,10/10/2015 03:00:00 AM,34,120,1000.7,FosterWeatherStation201510100300,Invalid or out-of-range value in column: Humidity
