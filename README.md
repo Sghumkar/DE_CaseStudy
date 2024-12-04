@@ -8,7 +8,7 @@ This pipeline processes and analyzes sensor data stored in a PostgreSQL database
 
 ## **Dataset Information**
 
-- **Dataset Link**: [Beach Weather Stations Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/beach-weather-stations)  
+- **Dataset Link**:Dataset is from Kaggle [Beach Weather Stations Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/beach-weather-stations)  
 - **Database**: PostgreSQL  
 
 ### **Dataset Description**  
@@ -21,22 +21,21 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
 - **Barometric Pressure**: Pressure recorded by the sensor.  
 - **Measurement ID**: A unique identifier created by combining the `Station Name` and `Measurement Timestamp`.  
 
-
+---
 
 ## **Prerequisites**
 
 1. Ensure the PostgreSQL database is accessible and configured correctly.  
 2. Update the `.env` file with the following:  
    ```plaintext
-   DB_HOST=<your-database-host>
-   DB_PORT=<your-database-port>
-   DB_USER=<your-database-username>
-   DB_PASSWORD=<your-database-password>
-   DB_NAME=<your-database-name>
-   SCHEMA_NAME=<your-schema-name>
-   LOG_FILE_PATH=<path-to-log-file>
-   DATASET_PATH=<path-to-dataset>
+    DB_NAME=<your-database-name>
+    DB_USER=<your-database-username>
+    DB_PASSWORD=<your-database-password>
+    DB_HOST=<your-database-host>
+    DB_PORT=<your-database-port>
+    DB_SCHEMA=<your-schema-name>
    ```
+
 ---
 
 ## **Setup and Execution Instructions**
@@ -47,7 +46,7 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
      ```bash
      python3 -m venv env
      source env/bin/activate   # On macOS/Linux
-     env\Scriptsctivate      # On Windows
+     env\Scripts\activate      # On Windows
      ```
 
 ### 2. **Install Dependencies**
@@ -77,18 +76,25 @@ The dataset contains **18 columns**, but this pipeline uses the following key co
 ```
 sensor-data-pipeline/
 │
-├── data/                  # Folder for raw and processed data
-├── logs/                  # Folder for log files
-├── src/                   # Source code
-│   ├── db_utils.py        # Database operations
-│   ├── data_handler.py    # File processing pipeline
-│   ├── validation.py      # Data validation functions
-│   ├── aggregation.py     # Data aggregation functions
-│   └── monitor.py         # Watchdog for monitoring new files
-├── main.py                # Entry point for running the pipeline
-├── requirements.txt       # Python dependencies
-├── .env                   # Environment configuration file
-└── README.md              # Documentation
+├── data/                        # Folder for raw and processed data
+├── logs/                        # Folder for log files
+├── src/                         # Source code
+│   ├── aggregation.py           # Data aggregation functions
+│   ├── data_handler.py          # File processing pipeline
+│   ├── data_processor.py        # Data transformation and processing
+│   ├── file_utils.py            # File handling utilities
+│   ├── logger.py                # Logging setup and management
+│   ├── monitor.py               # Watchdog for monitoring new files
+│   ├── validation.py            # Data validation functions
+├── db/                          # Database related scripts
+│   ├── db_utils.py              # Database operations
+│   ├── retry_utils.py           # Retry logic for DB operations
+├── config/                      # Configuration files
+│   ├── settings.py              # Settings for the pipeline
+├── main.py                      # Entry point for running the pipeline
+├── requirements.txt             # Python dependencies
+├── .env                         # Environment configuration file
+└── README.md                    # Documentation
 ```
 
 ---
@@ -96,6 +102,6 @@ sensor-data-pipeline/
 ## **Contributors**
 - **Your Name**  
 
-For questions or feedback, please reach out to **[Your Email](mailto:your.email@example.com)**.
+For questions or feedback, please reach out to **[Your Email](mailto:swapnalighumkarw@gmail.com)**.
 
---- 
+---
